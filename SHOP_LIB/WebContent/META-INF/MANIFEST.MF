@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Specification-Title: Images
+Specification-Version: 1.0
+Implementation-Title: Images Implementation
+Implementation-Version: 1.0
+Extension-Name: images
+Class-Path: 
+

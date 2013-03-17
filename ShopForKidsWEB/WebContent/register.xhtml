@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<link type="text/css" href="styles.css" rel="stylesheet"></link>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<title>Creez un compte</title>
+</head>
+<body>
+<f:view>
+<div>
+	<a href="#"><img src="/images/logo.gif" width="237" height="123" class="float" alt="setalpm" /></a>																																																																
+ 
+  
+<div class="topnav">
+
+<span><strong>Welcome</strong>  &#160;<a href="#">Log in</a> &#160; |  <a href="#">Register</a>   <strong>&#160;Language:</strong> <a href="#"><img src="/images/flag1.jpg" alt="" width="21" height="13" /></a> <a href="#"><img src="/images/flag3.jpg"  /></a></span>
+	</div>
+				
+<ul id="menu">
+			
+<li><a href="#"><img src="/images/but1.gif" alt="" width="110" height="32" /></a></li>
+			
+<li><a href="#"><img src="/images/but2.gif" alt="" width="110" height="32" /></a></li>
+			
+<li><a href="#"><img src="/images/but3.gif" alt="" width="110" height="32" /></a></li>
+			
+<li><a href="#"><img src="/images/but4.gif" alt="" width="110" height="32" /></a></li>
+			
+<li><a href="#"><img src="/images/but5.gif" alt="" width="110" height="32" /></a></li>
+			
+<li><a href="#"><img src="/images/but6.gif" alt="" width="110" height="32" /></a></li>
+		</ul>
+	</div>
+	<div id="content">
+		
+<div id="sidebar">
+			
+<div id="navigation">
+				
+<ul>
+					
+<li><a href="#">Home page</a></li>
+					
+<li><a href="#">New products</a></li>
+					
+<li><a href="#">All products</a></li>
+<li><a href="#">Search</a></li>
+					
+<li><a href="#">Reviews</a></li>
+					
+<li><a href="#">F.A.Q.</a></li>
+					
+<li><a href="#">Contacts</a></li>
+				</ul>
+				
+<div id="cart">
+					<strong>Shopping cart:</strong> <br /> 0 items
+				</div>
+			</div>
+			
+<div>
+				<img src="/images/title1.gif" alt="" width="233" height="41" /><br />
+				
+<ul class="categories">
+					
+<li><a href="#">Action Toys &amp; Figures</a></li>
+					
+<li><a href="#">Arts &amp; Crafts</a></li>
+					
+<li><a href="#">Discovery &amp; Learning</a></li>
+					
+<li><a href="#">Dolls &amp; Soft Toys</a></li>
+					
+<li><a href="#">Games &amp; Puzzles</a></li>
+					
+<li><a href="#">Collectibles</a></li>
+					
+<li><a href="#">Infant &amp; Preschool</a></li>
+					
+<li><a href="#">Novelty &amp; Virtual</a></li>
+					
+<li><a href="#">Outdoors</a></li>
+					
+<li><a href="#">TV &amp; Films</a></li>
+				</ul>
+				<img src="/images/title2.gif" alt="" width="233" height="41" /><br />																																																																																																																																																															
+				
+<div class="review">
+					<a href="#"><img src="images/pic1.jpg" alt="" width="181" height="161" /></a><br />
+					<a href="#">Product 07</a><br />
+					
+<p>Dolor sit amet, consetetur sadipscing elitr, seddiam nonumy eirmod tempor. invidunt ut labore et dolore magna </p>
+					<img src="/images/stars.jpg" alt="" width="118" height="20" class="stars" />
+				</div>
+			</div>
+		</div>
+		<h:form>
+		<div class="wrapperForm" style="width:760px; margin: 10px auto; text-align: left;">
+		<fieldset style="padding:12px 10px 20px 0px;">
+		<legend style="color:#06F;">registration</legend>
+		<ul style="margin-left:10px ; list-style:none ; line-height:200%; ">
+		<li><p><h:outputText value="Vous etes :" styleClass="text-input"></h:outputText><span class="orange">*</span>&#160;&#160;&#160;
+		<h:selectOneMenu id="selectSexe" value="#{customerBean.selectedShUser.titre }" required="true">
+					<f:selectItems value="#{customerBean.titre }"/></h:selectOneMenu>
+		
+		</p><br/>
+		</li>
+								
+		<li>
+		<p>
+		<h:outputText value="Firstname:" styleClass="text-input"></h:outputText><span class="orange">*</span>&#160;&#160;&#160;
+							<h:inputText id="firstname" value="#{customerBean.selectedShUser.firstname}" 
+          required="true"  maxlength="64"></h:inputText>
+							<h:message for="firstname" styleClass="error"></h:message></p><br/>
+		</li>
+		
+		<li><p>
+							 <h:outputText value="Name:" styleClass="text-input"></h:outputText><span class="orange">*</span>&#160;&#160;&#160;
+							<h:inputText id="name" value="#{customerBean.selectedShUser.name}"  maxlength="64"></h:inputText>
+							<h:message for="name" styleClass="center"></h:message></p><br/></li>
+		<li>
+							<p>
+							<h:outputText value="Your  phone :" styleClass="text-input"></h:outputText><span class="orange">*</span>&#160;&#160;&#160;
+							<h:inputText id="phoneUser" value="#{customerBean.selectedShUser.phoneUser}"  maxlength="64"><f:validateLength minimum="9" maximum="9"></f:validateLength>
+							<f:ajax execute="phoneUser" event="blur" render="phonemess"/>
+							</h:inputText>
+									
+									<h:message id="phonemess" for="phoneUser" styleClass="center"/></p><br/>
+							</li>
+		<li>
+		<p>
+							<h:outputText value="Email:" styleClass="text-input"></h:outputText><span class="orange">*</span>&#160;&#160;&#160;
+							<h:inputText id="email" value="#{customerBean.selectedShUser.email}"  maxlength="64">
+							<f:validator validatorId="emailvalidator" ></f:validator>
+						
+							<f:ajax execute="email"  event="blur" render="EmailMessage"/>
+							</h:inputText>
+									
+									<h:message id="EmailMessage" for="email" styleClass="center"></h:message></p><br/>
+		</li>
+		<li><p>
+							
+							<h:outputText value="Fax:" styleClass="text-input"></h:outputText><span class="orange">*</span>&#160;&#160;&#160;
+							<h:inputText id="fax" value="#{customerBean.selectedShUser.fax}"  maxlength="64"></h:inputText>
+							<h:message for="fax" styleClass="center"></h:message></p><br/>
+							</li>
+				<li>
+					<p>
+							<h:outputText value="Your language:" styleClass="text-input"></h:outputText><span class="orange">*</span>&#160;&#160;&#160;
+							
+							<h:inputText id="langCusto" value="#{customerBean.selectedShUser.langCusto}"  maxlength="64"></h:inputText>
+							<h:message for="langCusto" styleClass="center"></h:message>
+							</p><br/>
+							</li>
+			<li>
+			<p>
+			<h:outputText value="Your birthday:" styleClass="text-input"></h:outputText><span class="orange">*</span>&#160;&#160;&#160;
+			<h:inputText id="jdate" value="#{customerBean.jdate}" style="width:20px; height:20px;"  maxlength="2"></h:inputText>&#160;
+			
+			<h:inputText id="mdate" value="#{customerBean.mdate}" style="width:20px; height:20px;"  maxlength="2"></h:inputText>&#160;
+			<h:inputText id="adates" value="#{customerBean.adate}" style="width:30px; height:20px;"  maxlength="4"></h:inputText>
+			</p><br/>
+        
+			</li>
+		
+		</ul>
+		</fieldset>
+		<fieldset>
+		 <legend><span><b>Give your credential account</b></span></legend>
+	 
+	<ul style="margin-left:10px ; list-style:none ; line-height:200%; ">
+	
+	<li><p>
+					<h:outputText value="Username:" styleClass="text-input"></h:outputText>
+							<h:inputText id="loginCusto" value="#{customerBean.selectedShUser.loginCusto}">
+							<f:validator validatorId="loginvalidator"/>
+							<f:ajax  execute="@this" event="blur" render="userMessage"/>
+							</h:inputText>
+							
+							<h:message id="userMessage" for="loginCusto" styleClass="center"></h:message>
+					</p> <br/></li>
+					
+					
+					<li><p>
+					<h:outputText value="Type Password:" styleClass="text-input"></h:outputText>
+					<h:inputSecret id="shPassword"></h:inputSecret>
+							
+							<h:message for="shPassword" styleClass="center"></h:message>
+					</p><br/></li>
+					<li><p>
+					<h:outputText value="Retype :" styleClass="text-input"></h:outputText>
+					<h:inputSecret id="shPassword1"></h:inputSecret>
+							
+							<h:message for="shPassword1" styleClass="center"></h:message>
+					</p><br/></li>
+	
+	</ul>
+					
+					
+					
+					
+		</fieldset>
+		<div>
+		
+		<h:commandButton id="IdNext" immediate="true" value="Next" action="#{customerBean.confirm}" style="float: right;"></h:commandButton>
+		</div>
+		</div>
+		</h:form>
+			
+		</div>
+</f:view>
+</body>
+</html>

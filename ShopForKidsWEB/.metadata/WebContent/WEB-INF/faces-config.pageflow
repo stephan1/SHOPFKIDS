@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13564954414810" configfile="/ShopForKidsWEB/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="login" x="372" y="228" id="pf13566679083502" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf13604502470610" path="/login.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="welcome" x="120" y="312" id="pf13604502470611" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf13604502470610" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="register" x="360" y="72" id="pf13607044183105" referenceLink="//@navigationRule.7/@navigationCase.0/@toViewId|" outlinks="pf13607044183106 pf13607044183107" inlinks="pf13607044183107 pf136072173377816" path="/register.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="Confirmation" x="620" y="103" id="pf13607044183118" referenceLink="//@navigationRule.7/@fromViewId|" outlinks="pf13607200922299 pf136072009222910 pf136072173377816" inlinks="pf13607044183106" path="/confirmation.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="register_address" x="666" y="295" id="pf136072009222911" referenceLink="//@navigationRule.5/@fromViewId|" outlinks="pf136072009222912" inlinks="pf13607200922299" path="/register_address.jspx"/>
+  <nodes xsi:type="pageflow:PFPage" name="reviewall" x="528" y="276" id="pf136072009222913" referenceLink="//@navigationRule.6/@fromViewId|" outlinks="pf136072009222914" inlinks="pf136072009222910" path="/reviewall.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="account_created" x="613" y="452" id="pf136072009222915" referenceLink="//@navigationRule.6/@navigationCase.0/@toViewId|" inlinks="pf136072009222912 pf136072009222914" path="/account_created.xhtml"/>
+  <links id="pf13604502470610" target="pf13566679083502" source="pf13604502470611"/>
+  <links id="pf13607044183106" target="pf13607044183118" source="pf13607044183105" outcome="success" redirect="true" fromaction="#{customerBean.confirm}"/>
+  <links id="pf13607044183107" target="pf13607044183105" source="pf13607044183105" outcome="failure" fromaction="#{customerBean.confirm}">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf13607200922299" target="pf136072009222911" source="pf13607044183118" outcome="register_adress" fromaction="#{customerBean.gotoAdressForm}"/>
+  <links id="pf136072009222910" target="pf136072009222913" source="pf13607044183118" outcome="reviewall"/>
+  <links id="pf136072009222912" target="pf136072009222915" source="pf136072009222911" outcome="success"/>
+  <links id="pf136072009222914" target="pf136072009222915" source="pf136072009222913" outcome="success"/>
+  <links id="pf136072173377816" target="pf13607044183105" source="pf13607044183118" outcome="back" redirect="true" fromaction="#{customerBean.BacktocreateUserForm}"/>
+</pageflow:Pageflow>

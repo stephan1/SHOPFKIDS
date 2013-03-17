@@ -1,0 +1,178 @@
+@CHARSET "ISO-8859-1";
+
+
+.enter_login_container {
+ margin: 0 auto;
+ padding: 0 0 10px 0;
+ background: transparent;
+ width: 820px;
+ text-align:left;
+}
+.enter_login_container .header2 {
+ margin: 15px 15px 0 0;
+ color:#555;
+ font-size:16px;
+ font-weight:bold;
+}
+.left_content, .right_content, .left_content_form {
+ margin: 20px 5px 10px 10px;
+ padding: 0
+}
+.right_header {
+ font-size:16px;
+ margin:15px 15px 15px 0;
+ font-weight:bold;
+ color:#555;
+}
+.left_content {
+ height: 140px;
+}
+.enter_login_container .enter_login_leftcol .left_content ul {
+ list-style-type: disc;
+ margin: 0;
+ padding-left: 25px;
+}
+.enter_login_container .enter_login_leftcol .left_content ul li {
+ margin-top: 15px;
+}
+
+.enter_login_box_radius {
+ border-radius: 5px;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+ -o-border-radius: 5px;
+ border: 1px solid #DBE0E5;
+}
+.enter_login_container .enter_login_leftcol{
+ text-align: left;
+ margin: 0;
+ padding: 0;
+ background: #f7f7f7;
+ float:left;
+}
+.enter_login_container .enter_login_rightcol{
+ text-align: left;
+ margin: 0 0 0 25px;
+ padding: 0;
+ background: #f7f7f7;
+ float:left;
+ min-height: 230px;
+
+ background: #ededed !important; /* for non-css3 browsers */
+ background: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#e1e1e1)) !important; /* for webkit browsers */
+ background: -moz-linear-gradient(top, #f7f7f7, #e1e1e1) !important; /* for firefox 3.6+ */
+ background: -o-linear-gradient(top, #f7f7f7, #e1e1e1) !important; /* for Opera */
+}
+.classic_style .enter_login_leftcol {
+ width:355px;
+ height: 230px;
+}
+.classic_style .enter_login_rightcol {
+ width:435px;
+}
+.guest_style .enter_login_leftcol,
+.guest_style .enter_login_rightcol {
+ width: 395px;
+}
+.btn_grey_main {
+ overflow:hidden;
+ margin:6px 30px 15px 15px;
+ float:right;
+ text-align:center;
+ padding:0;
+ width:auto;
+ height:28px;
+}
+.btn_grey_main a {
+ float:left;
+ background:url('https://static.allegrostatic.pl/site_images/1/0/login-page-sprite.png') repeat-x 0 -1px;
+ border: 1px solid #ebebeb;
+ border-bottom-color: none;
+ padding:5px 30px 5px 30px;
+ display:block;
+ text-decoration:none;color:#fff;
+}
+/*Remove button padding in FF*/
+input::-moz-focus-inner {
+ border: 0;
+ padding: 0;
+}
+.btn_login {
+ border: 1px solid #ffebd5 !important;
+ font-size:10pt !important;
+ margin:0 !important;
+ padding:0 33px !important;
+ height:28px !important;
+ text-decoration:none !important;
+ color:#fff !important;
+}
+.sub_orange {
+ background: #ededed url('https://static.allegrostatic.pl/site_images/1/0/login-page-sprite.png') repeat-x 0 -29px !important;
+}
+.sub_grey {
+ background:url('https://static.allegrostatic.pl/site_images/1/0/login-page-sprite.png') repeat-x 0 -1px !important;
+}
+.sub_red {
+ background:url('https://static.allegrostatic.pl/site_images/1/0/login-page-sprite.png') repeat-x 0 -55px !important;
+ background: -moz-linear-gradient(top, #db4a58 16%, #bd0914 100%) !important;
+ background: -webkit-linear-gradient(top, #db4a58 16%,#bd0914 100%) !important;
+ background: -o-linear-gradient(top, #db4a58 16%,#bd0914 100%) !important;
+ background: -ms-linear-gradient(top, #db4a58 16%,#bd0914 100%) !important;
+ background: linear-gradient(top, #db4a58 16%,#bd0914 100%) !important;
+}
+.welcome {
+ color: #666;
+ font-family: Times;
+ font-size: 24px;
+ font-style: italic;
+ margin-top: 5px;
+ margin-bottom: 17px;
+}
+
+.welcome_gfx {
+ margin-top: 5px;
+ height: 24px;
+ width:200px;
+ margin-bottom: 17px;
+ background:url('https://static.allegrostatic.pl/site_images/1/0/enter_login_texts.png') no-repeat 0 0;
+}
+.welcome_gfx span {
+ display:none;
+}
+.welcome_guest {
+ margin:0px;
+ height:22px;
+ width:200px;
+ background:url('https://static.allegrostatic.pl/site_images/1/0/enter_login_texts.png') no-repeat 0 -29px;
+}
+
+.welcome_guest_intro {
+ margin: 5px 0 30px 0;
+}
+.enter_login_footer {
+ margin:15px 0 0 15px;
+ text-align:center;
+}
+.formsWithoutHeader {
+ background-color: transparent;
+ margin: 15px 0 10px 8px;
+}
+
+.formsWithoutHeader ul li {
+ border: 0;
+}
+
+.formsWithoutHeader ul li label {
+ font-weight: normal;
+ width: 40%;
+ font-size:10pt;
+ color: #000;
+}
+
+.clr {
+ clear:both;
+}
+
+a.firstTime {
+ display: none !important;
+}

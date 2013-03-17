@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<title>Insert title here</title>
+</head>
+<body>
+<f:view>
+
+		<h:form id="reg" >
+			<p>
+				<h:outputText value="Your  phone :" styleClass="text-input"></h:outputText>
+				<span class="orange">*</span>&#160;&#160;&#160;
+				<h:inputText id="phoneUser" value="#{beans.text}" redisplay="true"
+					required="true">
+					<f:validateLength minimum="6" maximum="9"></f:validateLength>
+					
+				</h:inputText>
+			</p>
+			<br />
+            <h:messages id="phonemess" for="phoneUser" styleClass="center" errorStyle="color:red; display:block" ajaxRendered="true" />
+			
+			<h:outputText value="Your  phonesssss :" styleClass="text-input"></h:outputText>
+			<span class="orange">*</span>&#160;&#160;&#160;
+							<h:inputText id="phoneUr" value="#{beans.text}" redisplay="true">
+				<f:validateLength minimum="6" maximum="9"></f:validateLength>
+
+			</h:inputText>
+			<h:commandButton value="Submit" />
+		</h:form>
+
+
+	</f:view>
+</body>
+</html>
